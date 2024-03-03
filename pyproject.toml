@@ -61,6 +61,7 @@ disable_error_code = [
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.2.2"
+mypy = "^1.8.0"
 
 [build-system]
 requires = ["poetry-core"]
