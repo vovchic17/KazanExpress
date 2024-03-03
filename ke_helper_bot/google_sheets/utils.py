@@ -40,7 +40,7 @@ async def format_daily_table(ss: AsyncioGspreadSpreadsheet, sheet_id: int) -> No
         cell_formatter.merge(sheet_id, 1, 3, 14),
         cell_formatter.merge(sheet_id, 1, 14, 25),
         cell_formatter.rotate(sheet_id, 2, 7, 14, 90),
-        cell_formatter.rotate(sheet_id, 2, 19, 26, 90),
+        cell_formatter.rotate(sheet_id, 2, 18, 26, 90),
         cell_formatter.update_borders(sheet_id, 0, 2, 0, 1000000, "SOLID"),
         cell_formatter.update_borders(sheet_id, 2, 1000000, 0, 1000000, "DASHED"),
         cell_formatter.boolean_rule(sheet_id, 2, 1000000, 7, 12, "=GT(H3;S3)", "green"),
