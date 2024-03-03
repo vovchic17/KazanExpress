@@ -31,3 +31,6 @@ poetry install
 ```
 poetry run python ke_helper_bot
 ```
+
+## License
+Attribution-NonCommercial 4.0 International
