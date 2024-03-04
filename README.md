@@ -11,6 +11,8 @@ KazanExpressHelper
 
 **KazanExpressHelper** is a telegram-bot tool for [KazanExpress](https://kazanexpress.ru/) marketplace that analyzes the indicators of your products and comparing them with those of a competitor. This tool also provides notifications about stock, price and other indicators change.
 
+![Preview](https://raw.githubusercontent.com/vovchic17/static/main/src/kehelper.gif)
+
 ## Installation
 
 * Clone the repository
