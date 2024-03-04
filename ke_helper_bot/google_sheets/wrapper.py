@@ -26,7 +26,7 @@ class GoogleSheetsWrapper:
     """
     Google Sheets API wrapper for
     parsing task tables and
-    fill the report tables
+    filling in report tables
     """
 
     tz = timezone(timedelta(hours=3))

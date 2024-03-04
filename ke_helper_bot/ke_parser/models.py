@@ -198,8 +198,8 @@ class Characteristic:
     char: str
     value: str
 
-    char_index: int
-    value_index: int
+    char_id: int
+    value_id: int
 
 
 class CharacteristicView:
@@ -236,8 +236,8 @@ class CharacteristicView:
         ):
             for char_value in characteristic_values:
                 if not any(
-                    char.value_index == char_value.id
-                    and char.char_index == char_value.characteristic.id
+                    char.value_id == char_value.id
+                    and char.char_id == char_value.characteristic.id
                     for char in self.characteristics
                 ):
                     return False
