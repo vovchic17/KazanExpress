@@ -3,7 +3,7 @@ name = "ke_helper_bot"
 version = "0.1.0"
 description = "A bot that helps you analyze your products and products of your competitors, and determine product ratings."
 authors = ["VoVcHiC"]
-license = "MIT"
+license = "CC-BY-NC"
 readme = "README.md"
 
 [tool.poetry.dependencies]
