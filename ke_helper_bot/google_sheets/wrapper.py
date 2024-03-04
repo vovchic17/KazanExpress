@@ -499,11 +499,9 @@ class GoogleSheetsWrapper:
                 else:
                     # just add the product to storage
                     # for comparing in the future
-                    continue
-
-                self.products.setdefault(product.product_id, {})[
-                    product.product_skuid
-                ] = product
+                    self.products.setdefault(product.product_id, {})[
+                        product.product_skuid
+                    ] = product
 
             except LookupError:
                 await self.notify(f"❌ Не удалось найти товар\nСсылка: {record[3]}")
