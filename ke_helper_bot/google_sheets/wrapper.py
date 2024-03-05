@@ -404,8 +404,8 @@ class GoogleSheetsWrapper:
     ) -> None:
         """Check the stock of the products"""
         msgs = {
-            str(self.my_stock_notif_table_id): "Остаток товара в вашем магазине",
-            str(self.com_stock_notif_table_id): "Остаток товара в магазине конкурента",
+            self.my_stock_notif_table_id: "Остаток товара в вашем магазине",
+            self.com_stock_notif_table_id: "Остаток товара в магазине конкурента",
         }
         for record in records:
             try:
@@ -462,8 +462,8 @@ class GoogleSheetsWrapper:
     ) -> None:
         """Check the changes of the products"""
         msgs = {
-            str(self.my_notif_table_id): "Изменилась цена в вашем магазине",
-            str(self.com_notif_table_id): "Изменилась цена в магазине конкурента",
+            self.my_notif_table_id: "Изменилась цена в вашем магазине",
+            self.com_notif_table_id: "Изменилась цена в магазине конкурента",
         }
         for record in records:
             try:
