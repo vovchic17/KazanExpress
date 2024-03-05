@@ -403,6 +403,10 @@ class GoogleSheetsWrapper:
         self, records: list, notif_table: AsyncioGspreadSpreadsheet
     ) -> None:
         """Check the stock of the products"""
+        msgs = {
+            str(self.my_stock_notif_table_id): "Остаток товара в вашем магазине",
+            str(self.com_stock_notif_table_id): "Остаток товара в магазине конкурента",
+        }
         for record in records:
             try:
                 (
@@ -423,7 +427,7 @@ class GoogleSheetsWrapper:
                     await self.notify(
                         '<a href="https://docs.google.com/spreadsheets/d/'
                         f'{self.spreadsheet_key}/edit#gid={notif_table.id}">'
-                        f"Остаток товара в вашем магазине</a> <b>{shop}</b>\n"
+                        f"{msgs[notif_table.id]}</a> <b>{shop}</b>\n"
                         f'<i><a href="{record[3]}">{title}</a> <b>{char}</b>'
                         f"</i> достиг минимального ({stock} "
                         f"&lt;= {record[4]} шт.)"
@@ -457,6 +461,10 @@ class GoogleSheetsWrapper:
         self, records: list, notif_table: AsyncioGspreadSpreadsheet
     ) -> None:
         """Check the changes of the products"""
+        msgs = {
+            str(self.my_notif_table_id): "Изменилась цена в вашем магазине",
+            str(self.com_notif_table_id): "Изменилась цена в магазине конкурента",
+        }
         for record in records:
             try:
                 async with ClientSession(headers=self.ke_parser.headers) as session:
@@ -474,7 +482,7 @@ class GoogleSheetsWrapper:
                         await self.notify(
                             f'<b><a href="https://docs.google.com/spreadsheets/d/'
                             f'{self.spreadsheet_key}/edit#gid={self.my_notif_table_id}">'
-                            "Изменилась цена в вашем магазине</a></b>\n\n<i>"
+                            f"{msgs[notif_table.id]}</a></b>\n\n<i>"
                             f"<a href='{record[3]}'>{product.title}</a> "
                             f"<b>{product.characteristic}</b></i>\n\nМагазин: "
                             f"{product.shop}\nОценка: {product.rating} "
