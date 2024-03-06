@@ -68,7 +68,7 @@ class GoogleSheetsWrapper:
         self.agcm = AsyncioGspreadClientManager(self.__get_creds)
 
     def __get_creds(self) -> Credentials:
-        creds = Credentials.from_service_account_file("creds.json")
+        creds = Credentials.from_service_account_file(config.GOOGLE_SHEETS_API_CREDS)
         return creds.with_scopes(["https://www.googleapis.com/auth/drive"])
 
     async def init(self) -> None:
