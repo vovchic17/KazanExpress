@@ -486,7 +486,7 @@ class GoogleSheetsWrapper:
                             f"<a href='{record[3]}'>{product.title}</a> "
                             f"<b>{product.characteristic}</b></i>\n\nМагазин: "
                             f"{product.shop}\nОценка: {product.rating} "
-                            f"({product.reviews_count} оценок)\nЗаказы:"
+                            f"({product.reviews_count} оценок)\nЗаказы: "
                             f"{product.order_count}\nОстаток: {product.stock}\n"
                             f"Цена: {old_product.price} ₽ "
                             f"=&gt; {product.price} ₽"
