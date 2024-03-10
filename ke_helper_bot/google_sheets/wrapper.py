@@ -15,7 +15,7 @@ from gspread_asyncio import (
 from ke_parser.ke_parser import KEParser
 from ke_parser.models import GoogleSheetProduct
 
-from ke_helper_bot.config_reader import config
+from config_reader import config
 
 from . import utils
 
