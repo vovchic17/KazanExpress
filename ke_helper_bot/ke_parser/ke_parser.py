@@ -32,7 +32,7 @@ class KEParser:
     @staticmethod
     def get_id_from_link(link: str) -> int:
         """Return poduct id from the product link"""
-        matches = re.search(r"-([\d]{5,}\?|[\d]{5,}$)", link)
+        matches = re.search(r"([\d]{5,}\?|[\d]{5,}$)", link)
         if matches is not None:
             return int(matches.group(1).replace("?", ""))
         msg = "No product id was found in the link"
