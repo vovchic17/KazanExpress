@@ -62,7 +62,7 @@ class Sku(BaseModel):
     characteristics: list[SkuCharacteristic]
     available_amount: int = Field(alias="availableAmount")
     full_price: int | None = Field(alias="fullPrice", default=None)
-    charity_profit: int = Field(alias="charityProfit")
+    charity_profit: int | None = Field(alias="charityProfit", default=None)
     purchase_price: int | float = Field(alias="purchasePrice")
     barcode: int
     address: str | None = None
@@ -88,7 +88,7 @@ class Product(BaseModel):
     orders_amount: int = Field(alias="ordersAmount")
     r_orders_amount: int = Field(alias="rOrdersAmount")
     total_avaliable_amount: int = Field(alias="totalAvailableAmount")
-    charity_commission: int = Field(alias="charityCommission")
+    charity_commission: int | None = Field(alias="charityCommission", default=None)
     description: str
     comments: list
     attributes: list
